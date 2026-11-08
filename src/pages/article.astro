@@ -5,5 +5,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <div class="page-shell"><div class="container"><div class="row"><article class="col-xl-8 col-lg-9 editorial-content">
 <p class="review-note">Fictional research · Illustrative data</p><p>Representative material exercises the original Krigsvold text hierarchy, margins, link styling, and reading measure.</p><h2 id="questions">Questions and context</h2><p>A long paragraph remains useful for observing line length and the separation between textual and structural elements. The information is synthetic, but the layout follows the actual source.</p><blockquote><p>Clear records are easier to interpret when the hierarchy is visible.</p></blockquote><h3>What the sample establishes</h3><ul><li>Typographic roles</li><li>Section spacing</li><li>Link, focus, and list behavior</li></ul>
 <h2 id="data">Measurements</h2><table><thead><tr><th scope="col">Station</th><th scope="col">Reading</th></tr></thead><tbody><tr><th scope="row">North</th><td>12.4</td></tr><tr><th scope="row">South</th><td>10.8</td></tr></tbody></table>
-<h2 id="controls">Interface controls</h2><form onsubmit="return false"><label for="reference-query">Reference label</label><input id="reference-query" class="site-search-input" placeholder="Enter a label"/><button class="btn btn-dark-blue" type="button">Review</button></form>
+<h2 id="controls">Interface controls</h2>
+<form class="reference-review-form" onsubmit="return false">
+  <div class="krigsvold-field">
+    <label for="reference-query">Reference label</label>
+    <input id="reference-query" name="reference-query" type="text" placeholder="Enter a label" />
+  </div>
+  <button class="krigsvold-button" type="button">Review</button>
+</form>
 </article></div></div></div></BaseLayout>
+
+<style>
+  /* Page-level composition only. @krigsvold/core owns control appearance. */
+  /* Layout belongs to the example; Core owns the controls' appearance. */
+  .reference-review-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    align-items: end;
+    column-gap: var(--krigsvold-space-3, .75rem);
+    inline-size: min(100%, 27rem);
+    max-inline-size: 100%;
+  }
+  .reference-review-form > .krigsvold-field {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--krigsvold-space-2, .5rem);
+    min-inline-size: 0;
+  }
+  .reference-review-form > .krigsvold-field > label {
+    display: block;
+    margin: 0;
+  }
+  .reference-review-form > .krigsvold-field > input {
+    inline-size: 100%;
+    min-inline-size: 0;
+    block-size: var(--krigsvold-control-height);
+    min-block-size: var(--krigsvold-control-height);
+    box-sizing: border-box;
+    padding-block: 0;
+    margin: 0;
+  }
+  .reference-review-form > .krigsvold-button {
+    margin: 0;
+    align-self: end;
+  }
+  /* At very narrow widths, maintain usable field and button targets. */
+  @media (max-width: 22rem) {
+    .reference-review-form { grid-template-columns: minmax(0, 1fr); row-gap: var(--krigsvold-space-3, .75rem); }
+    .reference-review-form > .krigsvold-button { justify-self: start; }
+  }
+</style>
