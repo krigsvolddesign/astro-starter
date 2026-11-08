@@ -1,12 +1,12 @@
-# Krigsvold — Astro reference site
+# Krigsvold — Astro starter
 
 A **cloneable, content-neutral Astro project** extracted from the working [krigsvold.org](https://krigsvold.org/) design. Krigsvold retains blue, gold and white, with its distinctive navy, ice-blue, and paper compositions. The original site remains the visual and behavioral reference.
 
 ## Clone and run
 
 ```bash
-git clone https://github.com/krigsvolddesign/site.git
-cd site
+git clone https://github.com/krigsvolddesign/astro-starter.git
+cd astro-starter
 npm ci
 npm run dev
 ```
@@ -33,3 +33,11 @@ The original source code is `basuhoward/krigsvold.org` at commit `007a4d379e9bd3
 ## Identity and imagery
 
 The header, footer, homepage emblem and favicon use the design language's **faceted ice crystal** (`public/assets/mark.svg`), not James Howard's arms or personal `owner.svg`. The approved panoramic ice-shelf artwork comes from the existing Krigsvold Jekyll reference. The language retains blue, gold and white, with navy/ice dominant and gold selectively accented. Sites cloned from this template do not imply affiliation with James Howard or any personal institution.
+
+## Repository roles
+
+This repository was renamed from `site` to `astro-starter`; update existing remotes with `git remote set-url origin https://github.com/krigsvolddesign/astro-starter.git`. Your working directory can keep its existing name.
+
+The full reference application lives at [`krigsvolddesign/astro/reference`](https://github.com/krigsvolddesign/astro/tree/develop/reference), alongside the npm component package. This starter remains an independent clonable application; it is not bundled in the Astro npm package. `website` remains the primary design website.
+
+The starter currently depends on unreleased Core `site.css` via a pinned Git commit. Keep that pin until a Core release exports the extracted site grammar, then update the registry version and lockfile together. Switching to the currently published Core release would remove that required export.
