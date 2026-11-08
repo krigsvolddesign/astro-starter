@@ -26,6 +26,10 @@ This is a **source-derived working baseline** with placeholder pages, not yet a 
 
 The app currently has four sample routes: `/`, `/article/`, `/document/`, and `/search/`. Core must eventually support these and all the additional canonical examples, dashboards and workspaces without reference-only CSS.
 
-The original source code is `basuhoward/krigsvold.org` at commit `007a4d379e9bd37dee55f86827df6e067ff27335`; see [EXTRACTION-MAP.md](EXTRACTION-MAP.md). Reference content is fictional; the retained original Antarctic hero photo is used solely to study the source image and veil treatment. Retained Material Kit files carry their original license notices.
+The original source code is `basuhoward/krigsvold.org` at commit `007a4d379e9bd37dee55f86827df6e067ff27335`; see [EXTRACTION-MAP.md](EXTRACTION-MAP.md). Reference content is fictional; the approved Krigsvold ice-shelf panorama replaces the original site hero, with provenance in `public/assets/images/hero/provenance.json`. Retained Material Kit files carry their original license notices.
 
 **Status:** development on `develop`. No release tags, production deployments, or npm publications. A reusable npm site initializer is a separate publication step, not falsely claimed here.
+
+## Identity and imagery
+
+The header, footer, homepage emblem and favicon use the design language's **faceted ice crystal** (`public/assets/mark.svg`), not James Howard's arms or personal `owner.svg`. The approved panoramic ice-shelf artwork comes from the existing Krigsvold Jekyll reference. The language retains blue, gold and white, with navy/ice dominant and gold selectively accented. Sites cloned from this template do not imply affiliation with James Howard or any personal institution.

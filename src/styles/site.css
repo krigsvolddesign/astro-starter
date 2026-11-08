@@ -132,6 +132,7 @@ img { max-width: 100%; }
   display: flex;
   min-height: 760px;
   align-items: center;
+  background-image: url('/assets/images/hero/krigsvold-hero-2172.webp');
   background-position: center;
   background-size: cover;
   color: white;
@@ -411,3 +412,9 @@ body.krigsvold { font-family: var(--krigsvold-font-sans); font-size: 1rem; line-
 .editorial-content pre { overflow: auto; }
 .editorial-content table { display: block; overflow-x: auto; }
 @media(max-width:575.98px) { .page-masthead h1 { font-size: clamp(2rem,9vw,2.8rem); overflow-wrap: anywhere; } .home-hero h1 { font-size: clamp(2.3rem,10vw,3.3rem); } .site-footer a { overflow-wrap: anywhere; } }
+
+/* Source-approved Krigsvold panoramic artwork: preserve the wide composition
+   on small devices rather than forcing a narrow crop of the ice shelf. */
+@media (max-width: 48rem) {
+  .home-hero { background-image: url('/assets/images/hero/krigsvold-hero-960.webp'); background-size: 100% auto; background-position: center top; background-repeat: no-repeat; background-color: var(--navy-950); }
+}
