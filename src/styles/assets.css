@@ -1,0 +1,7 @@
+/* Consumer-selected artwork; no presentation rules live here.
+   Krigsvold Core owns all visual treatment. */
+:root {
+  --krigsvold-site-hero-image: url('/assets/images/hero/krigsvold-hero-2172.webp');
+  --krigsvold-site-hero-image-narrow: url('/assets/images/hero/krigsvold-hero-960.webp');
+  --krigsvold-site-feature-image: url('/assets/images/hero/krigsvold-hero-2172.webp');
+}
